@@ -429,7 +429,7 @@ Wave height standard deviation: 1.1440155050316319
 > for example: `help(numpy.cumprod)`.
 {: .callout}
 
-> ## What about NaNs?
+> ## What about nans?
 > 
 > In real datasets, particularly ones which come from observational data, it's quite common
 > for some values to be missing. There are various strategies to deal with missing values; one of which is to
@@ -437,12 +437,12 @@ Wave height standard deviation: 1.1440155050316319
 > Kelvin, or 999 for a missing latitude or longitude value). However, the issue with this is that 
 > we would need to check for these values before calculating any summary statistic.
 >
-> Instead, we can use NumPy's `NaN` ("not a number") value, which will tell NumPy that these are 
+> Instead, we can use NumPy's `nan` ("not a number") value, which will tell NumPy that these are 
 > values that need to be dealt with in a special manner. NumPy also provides various functions to help deal with NaNs.
 > However, we can't use NumPy's normal statistical functions on any array that contains a NaN, as this returns a NaN:
 > 
 > ~~~
-> data = numpy.array([[1,2,3],[1,numpy.NaN,3],[1,2,3]])
+> data = numpy.array([[1,2,3],[1,numpy.nan,3],[1,2,3]])
 > numpy.mean(data)
 > ~~~
 > {: .language-python}
@@ -455,7 +455,7 @@ Wave height standard deviation: 1.1440155050316319
 > Instead, we need to use the NumPy function `nanmean`:
 >
 > ~~~
-> data = numpy.array([[1,2,3],[1,numpy.NaN,3],[1,2,3]])
+> data = numpy.array([[1,2,3],[1,numpy.nan,3],[1,2,3]])
 > numpy.nanmean(data)
 > ~~~
 > {: .language-python}
@@ -465,7 +465,7 @@ Wave height standard deviation: 1.1440155050316319
 > ~~~
 > {: .output}
 >
-> If, at a later date, we'd like to replace all the NaNs with a sensible numerical value
+> If, at a later date, we'd like to replace all the nans with a sensible numerical value
 > (e.g. the mean of the column), NumPy also provides functions that can help with this
 {: .callout}
 
