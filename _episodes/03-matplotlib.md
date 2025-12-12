@@ -360,7 +360,7 @@ which is the default for plotting matrix-type data (because this is where `[0:0]
 We can also add a colour bar to help describe the figure, with a little more code:
 
 ~~~
-import mpl_toolkits
+import mpl_toolkits.axes_grid1
 
 matplotlib.pyplot.figure()
 ax = matplotlib.pyplot.gca()
